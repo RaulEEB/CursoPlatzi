@@ -1,0 +1,145 @@
+:::::::: APUNTES ::::::::
+
+\d => representa un dígito, por ejemplo si quiero buscar 3 digitos sería \d\d\d
+\w => A a la Z y guión bajo. Para una palabra
+\s => para los espacios.
+[0-9] => Para los dígitos del cero al 9
+[6-9] =>Para los dígitos del seis al 9
+[a-z] => Para buscar entre letras de a a la z
+[a-zA-Z] => Para buscar entre a ala z y A mayúscula a la Z mayúscula.
+[a-zA-Z0-9] => Para buscar entre a ala z y A mayúscula a la Z mayúscula y los dígitos del 0 al 9
+[a-zA-Z0-9_] => Para buscar entre a ala z y A mayúscula a la Z mayúscula y los dígitos del 0 al 9 y el guión bajo
+[a-zA-Z0-9_\.] => Para buscar entre a ala z y A mayúscula a la Z mayúscula y los dígitos del 0 al 9 y 
+el guión bajo e incluye al punto ya que se puso el \.
+
+. => Es cualquier caracter
+* => Es indicar que puede haber o no lo que le precede
++ => Es indica si hay uno o más de lo anterior, ejemplo: \d+ (uno o más dígitos)
+? => Indica que si halla uno o ninguno ósea que si exista o no el carácter que se pida 
+ejem: [a-z]? -> se indica que halla o no un carácter de a ala z 
+{2,2} => se indica cuantas veces se desea de algo que es el primer dígito 2 como mínimo y el otro 2 como máximo. Cota inferior y cota superior
+Ejem: \d{2,2}
+{4,} => se especifica si es que hay 4 como mínimo y no halla un limite
+
+CONSTRUCCION DE UNA CLASE:
+
+[\-\.] => poner entre corchetes lo que se desea, en este caso son guiones y puntos
+Ejemplo:
+\d{2,2[\-\.]? => Se especifica que se desea dos dígitos como mínimo y como máximo 2, y le sigue o un guion y un punto que exista uno o no exista.
+\d{2,2[\-\. ]? => Lo mismo de arriba pero indicando que también considere el espacio.
+
+
+.+?, => Se está indicando que los matches sean mas pequeños, el signo de interrogación sirve como un cotador mas rápido pequeño 
+por ejemplo:
+Csv1,csv2,csv3. Lo que se pide es que encuentre el mas pequeño, y el resultado sería 3 de esos valores. 
+
+:::NEGACIONES:::
+
+\W => Se pide que no halla letras, números, guion.
+\D => Se pide que no halla digitos
+\S => Se pide que no halla espacio
+() => Sirven para hacer agrupaciones de matches
+
+[^0-6a-c] => la negación con el gorrito al inicio de la clase, para negar lo que no se desea
+
+
+::::::::::::::::::::::::
+
+INDICAR UN LIMITADOR:
+
+$ => Sirve para indicar que es un limite final de una línea.
+^ => Este al inicio indica que es el inicio de algo con el $ al final es combinacion
+Por ejemplo:
+^\d$ => SOLO ESTAMOS PIDIENDO UN DIGITO
+^\d{3,6}$ => SE PIDE QUE HALLA SOLO 3 A 6 DIGITOS.
+^[^\d].*$ => el primer ^ estamos usándo para indicar que inicia, el que está dentro del corchete indica que es la negación del dígito.
+
+
+:::::::::::::::::::::::::
+
+LOG: USAR EXPRESIONES REGULARES PARA LOGS
+
+^\[LOG.*\[WARN\].*$  => Se está pidiendo que comience ^ la linea, luego que siga con [LOG, el .* pide que siga lo que sea, \[WARN\].*$ y al final pide que siga con [WARN] y con lo que venga y cierra la linea $
+
+OTRO EJEMPLO:
+^\[LOG.*\[WARN\].*user@celismx\].*$  => se pide algo mas especifico
+
+
+:::::::::::::::::::::::::
+
+TELEFONOS:
+
+^\+?\d+[#pe]\d$    => Se está iniciando la linea con un signo + que puede o no exisitir, luego sigue uno o mas dígitos,  seguido de un carácter que puede ser # o p o e, al final que siga un dígito y e cierra la linea con $
+
+
+:::::::::::::::::::::::::
+
+URLS:
+
+^https?:\/\/[\w-\.]+\.\w{2,5}\/?\S* => arranca con http, la s puede o no existir gracias al ? 
+Luego siguen los :, se especifica que sigan los /, luego se considera los caracteres gracias a la w y también considera los guiones, el punto se especifica la cantidad de caracteres 2 a 5 que puede haber uno o mas y al final que debe ser un flash donde puede o no existir y por último se niega al espacio que puede o no que exista.
+
+
+:::::::::::::::::::::::::
+
+MAIL:
+
+[\w\._]{5,30}\+?[\w]{0,10}@[\w\.\-]{3,}\.\w{2.5} => esta es una forma
+
+
+:::::::::::::::::::::::::
+
+LOCALIZACIONES
+
+TIPS: 
+
+COODENADAS 1: LAT LON MSNM
+^\-?\d{1,3}\.\d{1,6},\s?\-?\d{1,3}\.\d{1,6},.*$
+
+COORDENADAS 2: ESTE OESTE, NORTE SUR.
+^\-?\d{1,3}\s\d{1,2}'\s\d{1,2}\.\d{2,2}"[WE],\s?\-?\d{1,3}\s\d{1,2}'\s\d{1,2}\.\d{2,2}"[SN]$
+
+
+::ADICIONALES::
+PARA UN FORMATO ESPECIFICO SEGUN LO REQUERIDO:
+https://github.com/gingsmith/moviedemo/blob/master/movies.dat (data para la expresión)
+
+^\d+::([\w\s:,\.\-&!\/]+)\s\((\d\d\d\d)\)::.*$
+
+
+PARA SACAR EL GET DE LAS WEBS:
+
+[\?&](\w+)=([^&\n]+)
+
+
+::::::FIND Y GREP:::::: en el terminal
+
+cat ../file/results.csv | grep ^2012 -> acá se está pidiendo que el resultado se le pase a través de grep la expresión regular.
+
+cat ../file/results.csv | grep ,3[0-9], -> acá se está solicitando que busque un marcador que comienza en 3 y el siguiente dígito que sea del 0 al 9.
+
+cat ../file/results.csv | grep SE$ -> Se pide los que terminen en  SE el pesos indica que es final de linea,
+
+cat ../file/results.csv | grep Brazil -> Busca todos los partidos de Brazil. 
+cat ../file/results.csv | grep Brazil | grep Uruguay -> Busca todos los partidos de Brazil, busca los partidos de urugay adicionalmente.
+
+cat ../file/results.csv | grep Brazil | grep Uruguay | grep ^1952  -> Busca todos los partidos de Brazil, busca los partidos de urugay adicionalmente. Y que sean en el año 1952 al inicio.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

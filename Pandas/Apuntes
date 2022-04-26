@@ -1,0 +1,36 @@
+CURSO DE NUMPY Y PANDAS: GoogleCodLab.
+=======================
+
+NUMPY:
+Calculo numerico, es velocidad, tamaño, tipos de datos. Para crear un redes neuronales.
+
+PANDAS:
+Manipulación de datos, creada sobre numpy, es velocidad, multiples formatos de archivos, alineación inteligente.
+
+
+
+NUMPY:
+======
+Su Array -> Principal objeto que tenemos de la libreria para el procesamiento de datos.
+			Representa de manera estrcuturada los datos
+			Indexado
+			Acceso a muchos elementos.
+
+
+Como saber a que dimensiones se está trabajando:
+Las dimensiones de único valor es un ESCALAR.
+Una dimensión de una lista de tipo python o cualquier lista, es un VECTOR.
+Dos dimensiones de filas y columnas, es una MATRIZ.
+Tres dimensiones 
+Cuatro dimensiones
+
+
+SHAPE Y RESHAPE:
+================
+Shape = Me indica la forma del arreglo, con que estructura se está trabajando.
+Reshape = 
+
+
+
+
+

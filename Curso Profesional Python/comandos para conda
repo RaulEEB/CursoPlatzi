@@ -1,0 +1,157 @@
+PARA LISTAR LOS AMBIENTES QUE TENGO CREADO:
+	conda env list
+
+COMANDO PARA CREAR UN NUEVO AMBIENTE PARA CONDA
+	conda create --name py35 python=3.5 pandas
+
+PARA ACTIVAR UN  AMBIENTE:
+	conda activate nombredelambiente
+	conda activate py35
+
+PARA DESACTIVAR UN AMBIENTE:
+	conda deactivate
+
+PARA LISTAR LOS PAQUETES DE UN AMBIENTE
+	conda list
+
+PARA LISTAR UN PAQUETE ESPECIFICO DEL AMBIENTE
+	conda list pandas
+
+PARA ACTULIZAR UN PAQUETE 
+	conda update pandas
+
+PARA INSTALLAR UNA NUEVA VERSION 
+	conda install pandas=1.2
+
+PARA ACTUALIZAR LA VERSION DE PYTHON
+	conda install python=3.9 pandas =1.2
+
+PARA ACTUALIZAR EL NOMBRE DEL AMBIENTE -> primero tenemos que crear un nuevo ambiente, copiando y clonando del ambiente que deseas
+	conda create --name py39 --copy --clone py35
+
+PARA ELIMINAR LIBRERIAS EN EL AMBIENTE QUE DESEO.
+	conda remove pandas 
+
+
+PARA ELIMINAR AMBIENTES
+	conda env remove --name py35
+
+
+
+
+SI QUIERES INSTALAR UNA LIBRERIA QUE NO ESTA AL MOMENTO DE PEDIR UN INSTALL
+EN LA PAGINA DE CONDA:
+
+https://anaconda.org
+
+INGRESAR A LA PAGINA Y EN EL SEARCH HACER UNA BUSQUEDA EN EL LISTADO SE PODRA OBSERVAR QUE HAY POR EJEMPLO
+
+	conda-forge/boltons ----> el conda-forge se le conoce como canal este es el lugar donde se encuentra esa libreria.
+
+
+PARA INSTALAR UN PAQUETE DE UN CANAL DISTINTO USAR:
+
+	conda install --channel conda-forge boltons ---> el channel es indicarle el canal, y luego ingresamos el paquete que deseamos instalar.
+
+PARA VER EL LISTADO DE LO QUE FUE EL TRAKKEO DE MIS LIBRERIAS UTILIZAR:
+
+	conda list --revision 
+	
+PARA BORRAR UN PAQUETE QUE NO SE ESTA UTILIZANDO O SE DESEA BORRAR ENTONCES SE LLAMA A UNA REVISION ANTERIOR, (CON EL COMANDO ANTERIOR SE VE EN QUE REVISION ESTÁ Y SE EJECUTA EL COMANDO ):
+
+	conda instsall --revision 0
+
+
+PARA COMPARTIR LOS AMBIENTES CON OTRAS PERSONA PUEDES EXPORTAR TU AMBIENTE: ESTE COMANDO EXPORTARÁ ABSOLUTAMENTE TODO
+
+	conda env export 
+
+PARA COMPARTIR EL AMBIENTE SIN TEXTOS ADICIONALES AL COSTADO DE LAS VERSIONES ES:
+	
+	conda env export --no-builds
+
+PARA EXPORTAR SOLO LAS DEPENDENCIAS QUE ESPECIFICASTE MANUALMENTE (este es el mejor porque funcionará en multiplataforma) --file sirve para especificale el archivo
+
+	conda env export --from-history --file enviroment.yml
+
+
+PARA INSTALAR UN AMBIENTE CON UN YML COMPARTIDO:
+	 
+	conda env create --file enviroment.yml
+
+
+PARA ACELERAR LA CREACION DE AMBIENTES VIRTUALES CON MAMBA
+===========================================================
+
+PARA INSTALAR MAMBA
+
+	conda install --channel condo-forge mamba
+
+PARA VER QUE PUEDO HACER CON MAMBA
+
+	mamba --help
+
+PARA INSTALAR CON MAMBA
+
+	mamba install 
+
+PARA INSTALAR CON MAMBA
+
+	mamba env create --file environment.yml
+	conda create --name py35 python=3.5
+
+
+PARA PODER CONTROLAR UN PROYECTO QUE CONTENGAN UN AMBIENTE, PERO DENTRO DE ESTE AMBIENTE USAR DIVISION DEL AMBIENTE EN SECCIONES PARA TRABAJAR
+	CREAR AMBIENTES DENTRO DEL AMBIENTE....... USAR Snakemake --> INVESTIGAR.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

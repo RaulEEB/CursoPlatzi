@@ -1,0 +1,122 @@
+PYTHON:
+
+Closure:
+-Debemos de tener una nested function => función anidada.
+-La nested function debe referenciar un valor del scopre superior => la función anidada debe de recordar la variable superior.
+-La función que envuelve a la nested function debe retornarla también.
+
+Cuando usar Closure:
+	-Cuando tengamos una clase con un solo método, hará que se vuelva más elegante.
+	-Cuando trabajemos con decoradores.
+
+
+QUE ES UN DECORADOR:
+Función que recibe como parámetro otra función, le añade cosas y retorna una función diferente.
+
+
+GENERADORES:
+Usar una keyword yield -> lo que hace es pausar la iteración
+Hace que guarde un estado, cuando se ejecuta la función y llega al priemer yield se quedará ahí. 
+Luego cuando se vuelva a ejecutar desde el último yield que se quedo continuará.
+Cuando llegue al ultimo yield devuelve un StopIterator
+LA LISTA DE GENERADORES SE PUEDE HACER COMO UN LISTCOMPREEHENSION -> LO ÚNICO QUE VARIA ES EN VEZ DE USAR CORCHETES USAR PARENTESIS:
+EJEMPLO: my_second_gen = (x**2 for i in mylist)
+
+
+SETS: SON CONJUNTOS UNICOS E INMUTABLES strings, booleanos, tuplas, numeros.
+SE PUEDE CREAR DE LA SIGUIENTE FORMA:
+my_Set = {3,4,5} -> si parece a los diccionarios, pero si python no encuentra los : entonces lo entiende como set.
+también se puede crear de la siguiente forma, crear un set vacio
+empty_set = set()
+
+Casteando una estructura de datos
+my_set = set(my_list)
+
+Para agregarle un nuevo valor:
+ejemplo: my_set.add(4)
+para varios eeementos: my_set.update([1,2,5])
+otro ejemplo: my_set.update((1,7,2), {6,8})
+
+Para quitar elementos a un set:
+ejemplo: el_valor = 1
+my_set.discard(el_valor)
+
+también usando remove:
+my_set.remove(elemento)
+
+Si quiero eliminar un elemento que no existe al set, el discard simplemente no hace nada pero el elemento remove si bota un error.
+
+Para eliminar un elemento aleatorio:
+my_set.pop()
+
+Para eliminar todo el set.
+my_set.clear()
+
+
+METODOS ESPECIALES DEL CONJUNTO, DEL SET:
+
+UNION -> Union de dos sets.
+Como unirlos en python:
+my_set3 = my_set1 | my_set2
+
+INTERSECCIÓN -> Quedar con solo los elementos en comun
+my_set3 = my_set1 & my_set2
+
+DIFERENCIA -> Quitar los valores que tiene uncconjunto del otro, los conjuntos intersectados + los elementos de que tiene el otro conjunto, quedaría solo un conjunto.
+my_set3 = my_set1 - my_set2
+
+
+DIFERENCIA SIMETRICA -> son los elementos que no se comparten entre los conjuntos
+my_set3 = my_set1 ^ my_set2
+
+
+
+
+PARA USAR FECHAS:
+importar el datetime
+
+import datetime
+
+hora_utc = datetime.datetime.utcnow()
+hora_local = datetime.datetime.now()
+today = datetime.date.today()
+year = today.year
+month = today.month
+day = today.day
+
+
+para importar la clase datetime de datetime
+from datetime import datettime
+my_date = datetime.now()
+para formatear:
+my_date.strftime('%d/%m/%Y')
+
+
+PARA TRABAJAR CON FEHCAS DE MANERA MUNDIAL PODEMOS USAR UN MODULO O UNA LIBERRIA LLAMADA TIMEZONE se debe de instalar:
+
+pip install pytz
+
+para llamarlo en clase:
+import pytz 
+
+para usarlo:
+bogota = pytz.timezone('America/Bogota')
+print("Bogota: ", bogota.strftime("%d/%m/%Y, %H:%M:%S"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

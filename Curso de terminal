@@ -1,0 +1,308 @@
+¿QUE ES UN COMANDO?: Puede ser un programa ejecutable, una utilidad de la Shell, función de Shell, un Alias.
+
+Nombre de usuario es lo primero que aparece
+Lo que sigue luego del @ es el nombre de la PC o Hostname
+Virgulilla -> nos indica que estamos en la carpeta de HOME ~
+
+
+COMANDO PARA LISTAR DONDE ESTAMOS:
+
+	ls
+
+PARA MOVERNOS EN NUESTRAS CARPETAS: change directory (cd)
+	
+	cd nombredecarpetaamovernos
+	cd Picture
+
+PARA ELIMINAR LAS LINEAS EN LA TERMINAL
+
+	clear
+
+O TAMBIEN Command + L elimina
+
+
+COMANDO PARA LISTAR CON DETALLE LOS ARCHIVOS.
+
+	ls -l 		-> la L es para indicar long.
+
+PARA PODER LISTAR CON MAS LECTURA HUMANA
+
+	ls -lh 		-> la h es de human para poder enteder mejor.
+
+PARA RETROCEDER AL HOME:
+
+	cd
+
+PARA PRINT WORKING DIRECTORY pwd -> para saber el path completo
+
+	pwd
+
+UNA RUTA ABSOLUTA ES: /home/rauleb/documents/dev
+
+PARA MOVERME A UNA RUTA COMPLETA:
+
+	cd /home/rauleb/documents/dev
+
+PARA RUTA RELATIVA SON el . O los ..
+
+	cd ./Documents/Dev 	-> se esta especificando desde el home 
+
+PARA RETROCEDER
+
+	cd ..
+
+PARA DESCRIBIR UN ARCHIVO  -> da una descripción al archivo que deseas.
+
+	file archivo.txt
+	file ./Pictures/foto.png
+
+VARIANTES DEL COMANDO ls
+
+	ls -la 			-> l es para detalle y a para mostrar archivos ocultos
+
+	ls -lS			-> l de detalle y S para ordernar por tamaño
+	
+	ls -lSh			-> l de detalle, S ordenar tamaño y h para mejor lectura.
+
+	ls -lr			-> l detalle, r muestra de reversa
+
+	ls -lah			-> l detalle, a archivos ocultos, h mejor lectura.
+
+PARA LISTAR UNA CARPETA ESPECIFICA
+	
+	ls dir1
+	
+
+PARA DESPLEGAR NUESTROS ARCHIVOS COMO ARBOL usar el TREE:
+
+	tree -L 2		-> L para indicar a cuantos niveles y un numero para indicar cuantos niveles
+
+	tree -L 1		-> si quieres ver mejor la lista de cosas que hay
+
+
+PARA CREAR DIRECTORIOS:
+
+	mkdir nombredirectorio	-> para crear directorios pones nombre alfinal sin espacio recomendado
+
+PARA CREAR ARCHIVOS:
+
+	touch marchito
+
+SE PUEDE CREAR VARIOS DIRECTORIOS DE MANERA RAPIDA
+
+	mkdir dir1 dir2 dir3
+
+SE PUEDE CREAR VARIOS ARCHIVOS DE MANERA RAPIDA
+
+	touch file1 file2 file3
+
+PARA COPIAR ARCHIVOS
+
+	cp file1 newfile 	-> file1 es el archivo - newfile es el nombre del archivo que pondremos
+
+PARA MOVER ARCHIVOS y carpetas:
+
+	mv file_bk ..		-> mv es comando move - file_bk es la carpeta y .. es a donde lo movemos este caso atras o especificamos la carpeta
+
+PARA MOVER EL ARCHIVO Y CAMBIARLE EL NOMBRE:
+
+	mv file_bk fileCopy	-> mv mov - file_bk el archivo y fileCopy es el nuevo nombre
+
+PARA BORRAR ARCHIVOS
+
+	rm miArchivo
+
+PARA MOVER UNA OPCION INTERACTIVA
+
+	rm -i miArchivo 		-> rm remove , -i opción interactiva para preguntar (y/n) 
+
+PARA REMOVER UNA CARPETA COMPLETA:
+
+	rm -ri dir1		-> rm remove, -r que es recursiva, i interactiva para preguntar (y/n)
+
+CUIDADO CON USAR LA FORCE:
+
+	rm -rf dir1
+
+PARA ELIMINAR VARIOS DIRECTORIOS DE UNA:
+
+	rm -r dir2 dir3 dir3 dir_cp midirectio
+
+
+PARA EXPLORAR ARCHIVOS DE TEXTO:
+-------------------------------
+
+PARA MOSTRAR LAS PRIMERAS 10 LINEAS DE TEXTO:
+
+	head miarchivo.txt
+
+PARA MOSTRAR MAS LINEAS 
+
+	head marchivo.txt -n 15 		-> -n para indicar cuantas lineas seguido de un numero
+
+PARA MOSTRAR LAS ULTIMAS 10 LINEAS:
+
+	tail miarchivo.txt 
+	
+PARA MOSTRAR LAS ULTIMAS 20 LINEAS:
+
+	tail miarchivo.txt -n 20
+
+PARA MOSTRAR LO CON UNA INTERFAZ
+
+	less miArchivo.txt
+
+CON LESS PODEMOS HACER BUSQUEDA PONEIENDONOS AL FINAL Y PONEMOS /
+
+PARA SALIR DEL ARCHIVO PRESIONAR LA LETRA Q
+
+PARA ABRIR UN ARCHIVO:
+
+	open miArchivo.txt 	-> ESTE COMANDO ES SOLO PARA MAC
+
+	xdc-open miArchivo.txt	-> ESTE ES PARA LINUX
+
+PARA MATAR UN PROCESO EN LA TERMINAL SE PRESIONA:
+
+	command + C
+
+COMO ABRIR TODO EL SISTEMA DE ARCHIVOS EN LINUX:
+
+	nautilus 		-> PARA ABRIR DONDE NOS ENCONTRAMOS
+	nautilus Documents/dir1 	-> PARA ABRIR UNA CARPETA EN ESPECIFICO
+
+PARA ABRIR FINDER EN MAC:
+
+	open /
+
+
+PARA SABER QUE ES UN COMANDO:
+
+	type cd			-> se describir
+	type mkdir		
+
+
+PARA CREAR ALIAS PD LOS ALIAS SON TEMPORALES:
+
+	alias l="ls -lh"		-> l= es para indicar como se llamara tu comando, "comando" el comando va ne comillas
+
+PARA PEDIR AYUDA:
+
+	help cd
+	ls --help
+	help cd 			-> utilidad de Shell en este caso es bash
+	
+PARA SABER EL MANUAL DE USUARIO DE UN COMANDO:
+
+	man cd			-> muestra el manual
+
+PARA VER TAMBIEN PARECIDO PERO UN POCO MAS RESUMIDA:-
+
+	info cd
+
+PARA SABER LA NATURALEZA DEL COMANDO DE MANERA CORTA:
+	
+	whatis cd		-> no funciona en todos
+
+
+
+WILDCARDS -> Son una serie de caracteres especiales, para encontrar patrones y realizar búsquedas de manera mas avanzadas.
+
+PARA BUSCAR ARCHIVOS:
+
+	ls *.txt 		-> la WILDCARD es * y al final se especifica la extension
+	ls *.html
+
+PARA BUSCAR CON UN NOMBRE ESPECIFICO:
+
+	ls datos*		-> primero ponemos el nombre y luego * que es la wildcard
+
+PARA BUSCAR CON UN NOMBRE ESPECIFICO Y UN CARACTER AL FINAL
+
+	ls datos?		-> en este caso el ? indica que solo un carácter después del nombre
+	ls datos??		-> en este caso se especifica con 2 caracteres después del nombre
+	
+
+PARA REALIZAR BUSQUEDA ESPECIFICANDO UN CARACTER CON MAYUSCULA
+
+	ls [[:upper:]]*		-> se indicar con los corchetes que busque con la primera letra mayúscula y al final la wildcar * para poder indicar todo
+
+PARA REALIZAR BUSQUEDA DE SOLO CARPETAS
+
+	ls -d [[:upper:]]*
+	ls -d [[:lower:]]* 	-> para minuscules
+
+PARA REALIZAR BUSQUEDA DE ARCHIVOS ESPECIFICANDO LETRAS EN ESPECIFICO DE SU NOMBRE:
+
+	ls [ad]*			-> ad donde busca archivos que tengan la a y tmb archivos que tengan d
+
+
+	
+REDIRECCIONES:
+=============
+
+PIPE OPERATOR -> sirve para que a través un standar output pase a standar input.
+
+Comando para generar un standar output en la terminal 
+
+	echo "Hola Platzi"
+
+	cat error.txt output.txt -> el comando cat concatena ambos archivos cuando los muestra 
+
+PIPE OPERATOR 
+
+	ls -lh | less 		-> el pipe-operator es | ese que redirecciona le ls a un less
+
+    ls -lh | tee output.txt | less -> ls -lh comando, tee funciona como el redirrecionador para crear archivos entonces del resultado del ls creará un archivo en output.txt y luego con less lo muestra en pantalla.
+
+
+    Ls -lh Documents | sort | tee documents.txt | less -> documents se especifica la ruta que se quiere hacer, el sort es un filtro pero esta vez está ordenando, tee crea el archivo, less muestra en pantalla.
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
