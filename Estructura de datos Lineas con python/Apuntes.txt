@@ -62,6 +62,27 @@ Son los arreglos que son tipo tabla.
 
 
 
+::::: LINKED STRUCTURES :::::
+
+- Consiste de nodos conectados a otros
+- Los más comunes son sencillos o dobles
+- No se accede por indice sino por recorrido.
+
+Conceptos:
+- Data -> Valor que se alberga En el nodo 
+- Next -> referencia al siguiente nodo.
+- Previeus -> referencia al nodo anterior.
+- Head -> primer nodo
+- Tail -> último nodo.
+
+Sirven para:
+
+- Crear estructuras de datos más complejos
+- Como los snacks o queues
+- Optimización
+
+
+
 
 
 
