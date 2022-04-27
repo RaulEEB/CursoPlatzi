@@ -1,0 +1,69 @@
+Introducción:
+	Elementos en Python
+	Colecciones
+	Tipos y operaciones
+Estructura de datos lineales:
+	Arrays
+	Nodes
+	Linked lists
+	Stacks
+	Queues
+
+
+:::: COLECCIONES ::::
+Son estructuras de datos.
+Es un conjunto de cero o más elementos que pueden tratarse como una unidad conceptual.
+
+Tipos de colecciones: Son principales 2
+Dinámicas: Pueden crecer o disminuir su tamaño
+Inmutables: No cambian
+
+Podemos encontrar Estructuras Lineales.
+-Son ordenadas por posición.
+-Solo el primer elemento NO tiene predecesor.
+Ejemplo:
+	Fila Supermercado
+	Pila de platos
+	Checklist.
+
+Podemos encontrar Estructuras Jerárquicas
+-Ordenadas como un árbol invertido
+-Solo el primer elemento no tiene predecesor
+-Padres e hijos.
+Ejemplo:
+	Sistema de directorios.
+	Indices de libros.
+
+Podemos encontrar Estructuras Grafos:
+-Cada dato puede tener varios predecesores y sucesores
+-Estos se llaman vecinos.
+Ejemplo:
+	Vuelos de aviones que donde un destino puede estar conectado a mas destinos.
+
+Encontramos Estructuras desordenadas:
+-No tienen orden particular
+-No hay predecesores o sucesores
+Ejemplo:
+ 	Bolsa de Canicas.
+
+Encontramos Estructuras ordenadas:
+-Impone un orden con una regla.
+-item(i) <= item(I+1)
+
+OPERACIONES:::
+Tienen las siguientes caracteristicas
+Tamaño, pertenencia, recorrido, string, igualdad.
+Concatenación, Conversión de tipo, Insertar, Remover, Remplazar, Acceder.
+
+
+
+::::ARRAY DE DOS DIMENSIONES::::
+Son los arreglos que son tipo tabla.
+
+
+
+
+
+
+
+
