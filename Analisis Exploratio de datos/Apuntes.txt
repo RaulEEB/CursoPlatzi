@@ -1,0 +1,126 @@
+:::::EDA:::::
+Exploratory
+Data
+Analysis
+
+Años 90 -> Mineria de datos.
+kDD -> Knowledge Discovery in Database -> Para buscar conocimiento 
+
+SEMMA -> Sample, Explore, Modify, Model and Assess -> Muestra de datos.
+
+CRISP-DM -> Cross Industry Standard Process for Data Mining -> Valor a la industria.
+
+::::::::METODOLOGIA PARA DAR ORDEN::::::::
+
+Paso a paso:
+
+Data Requirements -> Requerimiento de información
+Data collection -> la recolección de datos
+Data processing -> Como se está procesando los datos
+Data cleaning -> Información es correcta? Limpiamos
+EDA -> Explicar y ver si tienes todo lo necesario.
+Modeling and algorithm -> modelo para IA
+Data Product
+
+::::::::ETAPAS DEL EDA:::::::::
+
+Stage 1-> Problem definition -> Definición del problema
+Stage 2 -> Data Preparation -> Preparación de datos
+Stage 3 -> Data Analysis -> Análisis de datos.
+Stage 4 -> Development and representation of the results -> Representación de todo.
+
+
+
+:::COMPARACIÓN CON ANALISIS ESTADISTICO CLASICO Y ANALISIS BAYESIANO.:::
+
+Analysis Clásico -> Solo se da análisis de los resultados que se obtienen, no tienen mucho contexto solo es un análisis de resultado. Solo da solución para algo del momento
+
+Análisis Bayeciano -> Siempre considera la distribución a priory, que paso anteriormente para predecir el futuro, no considera que puede pasar en el modelo
+
+EDA -> Es dinámico, regresa, entiende y al final lanza un modelo de ML, o IA, para generar ganancias, el EDA parta del contexto del negocio. Sirve para realizar automatizaciones
+
+
+:::::: HERRAMIENTAS PARA EDA:::::::
+Jupiter notebook
+AWS-SAGEMKER
+AWS-EMR -> pruebas en tiempo real 
+Google - Jupiter notebook cloud -> 
+Azure - Notebooks -> Solo experimentación
+R - Rstudio -> 
+KNIME -> Enfoca en dar programacion grafica. 
+ 
+
+PARA CREAR EL TOKEN DE ACCESO PARA PLOTLY USAS:
+https://account.mapbox.com/
+
+
+DISCRETA O CONTINUA
+
+Continua = Cuando puede tomar cualquier valor dentro de un intervalo.
+Temperatura registradas en un observatorio, tiempo en recorrer una distancia en una carrera
+
+
+Discreta = Cuando no puede tomar ningún valor entre dos consecutivos.
+Numoero de empleados de una fabrica, numero de hijos, numero de cuentas ocultas de Suiza
+
+
+TIPO DE DISTRIBUCIONES:
+Conoce los diferentes tipos de distribución de datos: 
+uniforme discreta,
+Bernoulli,
+Binomio, 
+Binomio negativo,
+Poisson,
+Geométrica, 
+Uniforme continua,
+Normal(curva de camana), 
+Exponencial,
+Gamma,
+Beta
+
+
+TIPS PARA COMO DETERMINAR LA DISTRIBUCION
+1. Representación gráfica de tu datos.
+2. Descarta primero lo que no puede ser
+	a. Si hay algún pico en el conjunto de datos, no puede ser una distribución uniforme discreta
+	b. Si los datos tienen más de un pico, no es Pisson o binomial.
+	c. Si tiene una sola curva, no hay picos secundarios, y tiene una pequeña pendiente en cada lado, podría ser una distribución Poisson o gamma. Pero no podrá ser una distribución uniforme discreta.
+
+
+:::::MEDIDA DE TENDENCIA CENTRAL:::::
+"No se puede predecir el comportamiento individual, pero si el comportamiento promedio".
+
+Ley de los grandes números:
+Dice que (bajo ciertas condiciones generales) la media de n variables aleatorias se aproxima a la media de la n medias.
+
+El teorema del limite central:
+Cuando el tamaño de la muestra es lo suficientemente grande, la distribución de las medias sigue aproximadamente una distribución normal.
+
+MEDIADAS ESTADISTICAS:
+Media, Mediana, Moda
+Min, Max, Producto de valores, Suma acumulada
+
+
+
+:::::::MEDIDAS DE DISPERSION::::::::
+
+Desviación estándar = La desviación estándar de una plobación repasa la cantidad de dispersión de los datos de una población entera.
+Un valor bajo de la desviación típica indica que los números del conjunto están relativamente concentrados alrededor de la media.
+
+VARIANZA = La varianza es una medida de dispersión que representa la variabilidad de una serie de datos respecto a su media.
+
+ASIMETRÍA ESTADISTICA 
+Las medidas de asimetría son indicadores que permiten establecer el grado de simetría (o asimetria) que presenta una distribución de probabilidad de una variable aleatoria sin tener que hacer una representación gráfica.
+
+CURTOSIS: (ACUMULACION DE DATOS)
+La curtosis de una variable estadística/aleatoria es una característica de forma de su distribución de frecuencia/probabidlidad 
+
+
+
+
+
+
+
+
+
+ 

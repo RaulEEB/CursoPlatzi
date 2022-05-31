@@ -78,8 +78,47 @@ Conceptos:
 Sirven para:
 
 - Crear estructuras de datos más complejos
-- Como los snacks o queues
+- Como los stacks o queues
 - Optimización
+
+El problema es:
+NO maneja indices, hay que simularlos
+
+
+:::::::STACKS:::::
+Son colecciones lineales, que están basados en arrays o linklist
+Su principio fundamental es el LIFO: (Last in first-out) -> el primer elemento en llegar es el primero en salir.
+Tiene los métodos PUSH -> para añadir , POP-> para remover el elemento que está encima.
+TOP -> para saber cual es el primer elemento
+BOTTOM -> para saber cual es el último elemento.
+
+OPERACIONES O APLICACIONES:
+Convertir una operación en infix -> operaciones aritméticas por ejemplo 4x(5-(7+2))
+Postfix -> como ordenar los operadnos de los aritméticos.
+
+APLICACIONES:
+Los stacks tiene la posibilidad de invertir el orden de una lista.
+Implementar "undo" -> para rehacer o rollback.
+Mantener historiales de navegadores web.
+Hacer backtracking para hacer un recorrido de inicio a fin
+
+
+NOTA:
+No son iguales a las listas, son similares
+
+
+:::::QUEUES::::::
+SON LAS COLAS
+También cumple el principio FIFO (First in, First-out)
+-Concepto:
+REAR: El último elemento que entro
+FRONT: El primer elemento que será atendido.
+PRIORITY QUEUES -> Funcionan con mayor prioridad.
+
+
+
+
+
 
 
 
